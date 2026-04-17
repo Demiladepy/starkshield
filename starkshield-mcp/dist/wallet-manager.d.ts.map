@@ -1,0 +1,1 @@
+{"version":3,"file":"wallet-manager.d.ts","sourceRoot":"","sources":["../src/wallet-manager.ts"],"names":[],"mappings":"AAAA,OAAO,EACL,QAAQ,EAKR,iBAAiB,EAEjB,KAAK,eAAe,EACrB,MAAM,UAAU,CAAC;AAgBlB,wBAAsB,iBAAiB,IAAI,OAAO,CAAC,eAAe,CAAC,CAwClE;AAED,wBAAsB,eAAe,IAAI,OAAO,CAAC,iBAAiB,CAAC,CAclE;AAED,wBAAgB,mBAAmB,IAAI,QAAQ,CAK9C"}
