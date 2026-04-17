@@ -17,6 +17,8 @@ export function getRecentToolCalls(): ToolCallLogEntry[] {
 }
 
 export const ADVERTISED_TOOLS: string[] = [
+  "server_health",
+  "wallet_health",
   "wallet_create",
   "wallet_balance",
   "wallet_address",

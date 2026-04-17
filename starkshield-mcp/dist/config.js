@@ -11,4 +11,14 @@ export function getHttpPort() {
     const p = Number(raw);
     return Number.isFinite(p) && p > 0 ? p : undefined;
 }
+export function getSignerMode() {
+    if (process.env.PRIVY_WALLET_ID && process.env.PRIVY_PUBLIC_KEY)
+        return "privy";
+    if (process.env.STARKNET_PRIVATE_KEY)
+        return "private_key";
+    return "unconfigured";
+}
+export function isConfidentialConfigured() {
+    return Boolean(process.env.TONGO_PRIVATE_KEY && process.env.TONGO_CONTRACT);
+}
 //# sourceMappingURL=config.js.map

@@ -9,6 +9,8 @@ export function getRecentToolCalls() {
     return [...ring];
 }
 export const ADVERTISED_TOOLS = [
+    "server_health",
+    "wallet_health",
     "wallet_create",
     "wallet_balance",
     "wallet_address",

@@ -5,6 +5,7 @@ import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
 import { InMemoryEventStore } from "./in-memory-event-store.js";
 import { createStarkshieldMcpServer } from "./create-server.js";
 import { ADVERTISED_TOOLS, getRecentToolCalls } from "./tool-log.js";
+import { getNetwork, getSignerMode, isConfidentialConfigured } from "./config.js";
 
 export async function startHttpServer(port: number): Promise<void> {
   const app = createMcpExpressApp();
@@ -17,6 +18,9 @@ export async function startHttpServer(port: number): Promise<void> {
       tools: ADVERTISED_TOOLS,
       recentToolCalls: getRecentToolCalls(),
       sessions: Object.keys(transports).length,
+      network: getNetwork(),
+      signerMode: getSignerMode(),
+      confidentialConfigured: isConfidentialConfigured(),
     });
   });
 

@@ -50,6 +50,13 @@ See repository root `.env.example` (or set variables in your MCP host).
 
 `quantum_risk_scan` combines **fixed cryptographic architecture facts** (no LLM inference inside the tool) with **optional Starknet JSON-RPC checks** (contract deployment, address nonce). The assistant should explain the structured JSON, not invent new risk levels.
 
+## Core health tools
+
+- `server_health`: returns runtime readiness (network, signer mode, confidential feature flags, transport mode).
+- `wallet_health`: validates wallet connectivity and can optionally run deployment readiness checks.
+
+These are useful first calls before destructive tools in both stdio and HTTP transport modes.
+
 ## License
 
 MIT

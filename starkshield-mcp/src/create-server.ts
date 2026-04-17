@@ -1,5 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerWalletTools } from "./tools/wallet.js";
+import { registerCoreTools } from "./tools/core.js";
 import { registerTransferTools } from "./tools/transfer.js";
 import { registerSwapTools } from "./tools/swap.js";
 import { registerLendingTools } from "./tools/lending.js";
@@ -18,6 +19,7 @@ export function createStarkshieldMcpServer(): McpServer {
   );
 
   registerWalletTools(server);
+  registerCoreTools(server);
   registerTransferTools(server);
   registerSwapTools(server);
   registerLendingTools(server);
